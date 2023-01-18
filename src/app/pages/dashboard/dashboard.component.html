@@ -19,8 +19,9 @@
             <mat-grid-tile colspan="2">
               <mat-form-field appearance="outline" style="width: 100%">
                 <mat-label>Grouping by</mat-label>
-                <mat-select>
+                <mat-select [formControl]="groupby" (selectionChange)="onGroup($event)">
                   <mat-option value="one">Select</mat-option>
+                  <mat-option value="product_description">product description</mat-option>
                 </mat-select>
               </mat-form-field>
             </mat-grid-tile>
